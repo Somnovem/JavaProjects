@@ -1,6 +1,5 @@
 package com.itstep.homework_8.models;
 
-import com.itstep.homework_8.enums.ShopCategory;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -19,6 +18,6 @@ public class ShopModel {
     private String phone;
     private String email;
     private String website;
-    private ShopCategory category;
+    private String category;
     private String description;
 }
