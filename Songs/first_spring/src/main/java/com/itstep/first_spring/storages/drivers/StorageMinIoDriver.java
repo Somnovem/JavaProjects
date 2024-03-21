@@ -19,11 +19,11 @@ public class StorageMinIoDriver implements StorageDriverInterface
     @Value("${storage.minio.endpoint}")
     private String endpoint = "http://localhost:9000"; // Замените на ваше значение
 
-    @Value("${storage.minio.access.key}")
-    private String accessKey = "o8x5Uwv0PPB1YeeM0U5w"; // Замените на ваше значение
+    @Value("RBzkA3RUaXrZfHNjzs9Y")
+    private String accessKey = "RBzkA3RUaXrZfHNjzs9Y"; // Замените на ваше значение
 
-    @Value("${storage.minio.secret.key}")
-    private String secretKey = "wOxeP8y1G04Hx3SpSivj27tQftmc2M8b7PGTE2xp"; // Замените на ваше значение
+    @Value("DQeLqXlAOiIqzkUDQYw6eOahvsXiHTLf6aeSXgLn")
+    private String secretKey = "DQeLqXlAOiIqzkUDQYw6eOahvsXiHTLf6aeSXgLn"; // Замените на ваше значение
 
     private MinioClient minioClient;
 
