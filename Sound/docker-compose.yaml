@@ -1,0 +1,35 @@
+version: '3'
+services:
+
+  db.mysql.sound.main:
+    build:
+      dockerfile: Dockerfile
+      context: ./services/mysql
+    container_name: db.mysql.sound.main
+    volumes:
+      - ./volumes/db/mysql/sound/main:/var/lib/mysql
+    env_file:
+      - .env
+    ports:
+      - '3306:3306'
+    networks:
+      - sound
+
+  storage.minio.sound:
+    build:
+      dockerfile: Dockerfile
+      context: ./services/minio
+    container_name: storage.minio.sound
+    volumes:
+      - ./volumes/storage/minio/sound:/var/lib/minio
+    env_file:
+      - .env
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    networks:
+      - sound
+
+networks:
+  sound:
+    driver: bridge
